@@ -1,21 +1,13 @@
 from django.db import models
 
 
-class ElementType(models.Model):
-    """Model representing pokemon elemental types"""
-    element = models.TextField(max_length=20)
-
-    def __str__(self):
-        return self.element
-
-
 class Pokemon(models.Model):
     """Model representing a pokemon, but not a specific pokemon"""
-    id = models.IntegerField()
+    id = models.IntegerField(primary_key=True)
     name = models.TextField(max_length=50)
     description = models.TextField(max_length=300)
     height = models.TextField(max_length=7)
-    weight = models.DecimalField(max_digits=4, decimal_places=1)
+    weight = models.DecimalField(max_digits=5, decimal_places=1)
     category = models.TextField(max_length=20)
     overgrow = models.TextField(max_length=20)
     hp = models.IntegerField()
@@ -24,8 +16,15 @@ class Pokemon(models.Model):
     specattack = models.IntegerField()
     specdefense = models.IntegerField()
     speed = models.IntegerField()
-    type = models.ManyToManyField(ElementType)
-    weakness = models.ManyToManyField(ElementType)
+    type1 = models.TextField(max_length=20)
+    type2 = models.TextField(max_length=20)
+    weakness1 = models.TextField(max_length=20)
+    weakness2 = models.TextField(max_length=20)
+    weakness3 = models.TextField(max_length=20)
+    weakness4 = models.TextField(max_length=20)
+    weakness5 = models.TextField(max_length=20)
+    weakness6 = models.TextField(max_length=20)
+    weakness7 = models.TextField(max_length=20)
 
     def __str__(self):
         return self.name

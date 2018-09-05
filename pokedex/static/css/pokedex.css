@@ -1,0 +1,33 @@
+.top-title {
+    background-color: #cc0000;
+    overflow: hidden;
+}
+
+.top-title a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 32px;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+.middle-content {
+    float: left;
+    padding: 8px 16px;
+}
+
+.list-heading {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.list-items {
+    font-size: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+td {
+    padding: 0px 10px 10px 0px;
+}

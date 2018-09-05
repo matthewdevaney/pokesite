@@ -1,0 +1,28 @@
+{% extends 'pokedex/base.html' %}
+
+{% block content %}
+
+<div class="list-heading">
+    <p>Pokemon List</p>
+</div>
+
+<div class="list-items">
+<table>
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Type</td>
+        <td></td>
+    </tr>
+    {% for poke in pokemon %}
+    <tr>
+        <td>{{ poke.id }}</td>
+        <td>{{ poke.name }}</td>
+        <td>{{ poke.type1 }}</td>
+        <td>{{ poke.type2 }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+
+{% endblock %}
