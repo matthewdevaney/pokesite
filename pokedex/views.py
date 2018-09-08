@@ -11,14 +11,17 @@ def index(request):
 
 def pokemon_list(request):
     pokemon = Pokemon.objects.order_by('id')
-    return render(request, 'pokedex/pokemon_list.html', {'pokemon': pokemon})
+    return render(request, 'pokemon_list.html', {'pokemon': pokemon})
 
 
 def pokemon_add(request):
     if request.method == 'POST':
         form = PokemonForm(request.POST)
         if form.is_valid():
-            return redirect(request, 'pokedex/pokemon_list.html')
+            form.save()
+            return redirect('pokemon_list')
+        else:
+            print(form.errors)
     else:
         form = PokemonForm()
-    return render(request, 'pokedex/pokemon_add.html', {'form': form})
+    return render(request, 'pokemon_add.html', {'form': form})

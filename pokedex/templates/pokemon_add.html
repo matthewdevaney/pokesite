@@ -1,4 +1,4 @@
-{% extends 'pokedex/base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
 
@@ -11,7 +11,7 @@
         {% csrf_token %}
         <table>
         <tr>
-           <td>General Info</td>
+            <td>General Info</td>
         </tr>
         <tr>
             <td>
@@ -35,6 +35,14 @@
             </td>
             <td>
                 {{ form.description }}
+            </td>
+        </tr>
+       <tr>
+            <td>
+                {{ form.icon.label}}
+            </td>
+            <td>
+                {{ form.icon }}
             </td>
         </tr>
         </table>

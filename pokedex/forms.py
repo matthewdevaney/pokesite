@@ -1,7 +1,14 @@
 from django import forms
+from .models import Pokemon
 
 
-class PokemonForm(forms.Form):
+class PokemonForm(forms.ModelForm):
+
+    class Meta:
+        model = Pokemon
+        fields = ['id', 'name', 'description', 'icon']
+
+    """
     id = forms.IntegerField(label='Pokemon ID#')
     name = forms.CharField(label='Pokemon')
     description = forms.CharField(label='Description')
@@ -24,5 +31,7 @@ class PokemonForm(forms.Form):
     weakness5 = forms.CharField(label='Weakness 5')
     weakness6 = forms.CharField(label='Weakness 6')
     weakness7 = forms.CharField(label='Weakness 7')
-    icon = forms.ImageField(label='icon')
     image = forms.ImageField(label='image')
+    icon = forms.ImageField(label='Icon')
+     """
+
