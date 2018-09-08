@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+from django.views import generic
+
 from .models import Pokemon
 from .forms import PokemonForm
 
@@ -25,3 +27,10 @@ def pokemon_add(request):
     else:
         form = PokemonForm()
     return render(request, 'pokemon_add.html', {'form': form})
+
+
+class PokemonDetail(generic.DetailView):
+    model = Pokemon
+
+
+

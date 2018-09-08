@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="list-heading">
+    <p>#{{ object.id }} - {{ object.name }}</p>
+</div>
+
+<img src="/media/{{ object.image }}">
+
+<div class="list-items">
+<table width="500">
+    <tr>
+        <td>
+            <div class="list-heading">
+                <p>Description</p>
+            </div>
+            {{ object.description }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="list-heading">
+                <p>Statistics</p>
+            </div>
+            Height: {{ object.height }}<br>
+            Weight: {{ object.weight }}<br>
+            Category: {{ object.category }}<br>
+            Overgrow: {{ object.overgrow }}<br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="list-heading">
+                <p>Attributes</p>
+            </div>
+            HP: {{ object.hp }}<br>
+            Attack: {{ object.attack }}<br>
+            Defense: {{ object.defense }}<br>
+            Spec Attack: {{ object.specattack }}<br>
+            Spec Defense: {{ object.specdefense }}<br>
+            Speed: {{ object.speed }}<br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="list-heading">
+                <p>Type</p>
+            </div>
+            {{ object.type1 }}<br>
+            {% if object.type2 %}
+            {{ object.type2 }}<br>
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="list-heading">
+                <p>Weakness</p>
+            </div>
+            {{ object.weakness1 }}<br>
+            {% if object.weakness2 %}
+            {{ object.weakness2}}<br>
+            {% endif %}
+            {% if object.weakness3 %}
+            {{ object.weakness3 }}<br>
+            {% endif %}
+            {% if object.weakness4 %}
+            {{ object.weakness4 }}<br>
+            {% endif %}
+            {% if object.weakness5 %}
+            {{ object.weakness5 }}<br>
+            {% endif %}
+            {% if object.weakness6 %}
+            {{ object.weakness6 }}<br>
+            {% endif %}
+            {% if object.weakness7 %}
+            {{ object.weakness7 }}<br>
+            {% endif %}
+        </td>
+    </tr>
+</table>
+</div>
+
+{% endblock %}
