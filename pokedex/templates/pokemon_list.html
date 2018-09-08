@@ -19,7 +19,7 @@
     <tr>
         <td><img src="media/{{ poke.icon }}"></td>
         <td>{{ poke.id }}</td>
-        <td>{{ poke.name }}</td>
+        <td><a href="{% url 'pokemon_detail' poke.id %}">{{ poke.name }}</a></td>
         <td>{{ poke.type1 }}</td>
         <td>{{ poke.type2 }}</td>
     </tr>
