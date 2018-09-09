@@ -2,62 +2,70 @@
 
 {% block content %}
 
-<div class="list-heading">
+<div class="content-heading">
     <p>#{{ object.id }} - {{ object.name }}</p>
 </div>
 
 <img src="/media/{{ object.image }}">
 
-<div class="list-items">
 <table width="500">
     <tr>
         <td>
-            <div class="list-heading">
+            <div class="content-heading">
                 <p>Description</p>
             </div>
-            {{ object.description }}
+            <div class="content-text">
+                {{ object.description }}
+            </div>
         </td>
     </tr>
     <tr>
         <td>
-            <div class="list-heading">
+            <div class="content-heading">
                 <p>Statistics</p>
             </div>
+            <div class="content-text">
             Height: {{ object.height }}<br>
             Weight: {{ object.weight }}<br>
             Category: {{ object.category }}<br>
             Overgrow: {{ object.overgrow }}<br>
+            </div>
         </td>
     </tr>
     <tr>
         <td>
-            <div class="list-heading">
+            <div class="content-heading">
                 <p>Attributes</p>
             </div>
+            <div class="content-text">
             HP: {{ object.hp }}<br>
             Attack: {{ object.attack }}<br>
             Defense: {{ object.defense }}<br>
             Spec Attack: {{ object.specattack }}<br>
             Spec Defense: {{ object.specdefense }}<br>
             Speed: {{ object.speed }}<br>
+            </div>
         </td>
     </tr>
     <tr>
         <td>
-            <div class="list-heading">
+            <div class="content-heading">
                 <p>Type</p>
             </div>
+            <div class="content-text">
             {{ object.type1 }}<br>
             {% if object.type2 %}
             {{ object.type2 }}<br>
             {% endif %}
+            </div>
         </td>
     </tr>
     <tr>
         <td>
-            <div class="list-heading">
+            <div class="content-heading">
                 <p>Weakness</p>
             </div>
+            <div class="content-text">
             {{ object.weakness1 }}<br>
             {% if object.weakness2 %}
             {{ object.weakness2}}<br>
@@ -77,15 +85,8 @@
             {% if object.weakness7 %}
             {{ object.weakness7 }}<br>
             {% endif %}
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="{% url 'pokemon_list' %}"><< Back to Pokemon List</a>
+            </div>
         </td>
     </tr>
 </table>
-</div>
-
-
 {% endblock %}

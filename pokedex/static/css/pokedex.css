@@ -1,33 +1,51 @@
-.top-title {
+.page-header {
     background-color: #cc0000;
     overflow: hidden;
+    margin: 0;
+    padding-bottom: 0;
 }
 
-.top-title a {
-    float: left;
+.page-header h1 {
     color: #f2f2f2;
-    text-align: center;
-    padding: 8px 16px;
+    text-align: left;
+    padding: 0px 16px;
     text-decoration: none;
     font-size: 32px;
     font-family: 'Luckiest Guy', cursive;
 }
 
-.middle-content {
+.page-header a:hover {
+    text-decoration: none !important;
+}
+
+.page-content {
     float: left;
-    padding: 8px 16px;
+    padding: 16px 16px;
 }
 
 .list-heading {
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
+    padding: 0px 0px 8px 0px;
 }
 
-.list-items {
-    font-size: 10px;
+.list-table {
+    font-size: 14px;
     font-family: 'Open Sans', sans-serif;
 }
 
-td {
-    padding: 0px 10px 10px 0px;
+.list-table td {
+    padding: 0px 10px 5px 0px;
+}
+
+.content-heading {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 16px 0px 0px 0px;
+}
+
+.content-text {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
 }
